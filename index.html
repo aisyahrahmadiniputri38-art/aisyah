@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>BMC - Salad Buah Segar</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>BMC Salad Buah Segar | Business Model Canvas</title>
     <style>
         * {
             margin: 0;
@@ -16,385 +12,350 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: #f0f9f0;  /* soft green background */
-            color: #1e2a1e;
+            background: linear-gradient(145deg, #f0f9f0 0%, #d4e9d6 100%);
+            font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
             padding: 2rem 1.5rem;
-            line-height: 1.5;
+            color: #1e2f2a;
         }
 
-        .container {
+        /* container utama */
+        .bmc-container {
             max-width: 1400px;
             margin: 0 auto;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(2px);
+            border-radius: 3rem;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.3);
         }
 
-        /* Header */
+        /* header */
         .header {
             text-align: center;
             margin-bottom: 2.5rem;
         }
 
         .header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #2b5e2b;
-            letter-spacing: -0.3px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .header h1 i {
-            background: #e8f5e8;
-            padding: 10px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            color: #2e7d32;
-        }
-
-        .subhead {
-            color: #3a5e3a;
-            margin-top: 8px;
-            font-weight: 500;
-            font-size: 1.1rem;
-            border-bottom: 2px dashed #b0d9b0;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #2b7a3e, #f4a261, #e9c46a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
             display: inline-block;
-            padding-bottom: 6px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.05);
         }
 
-        /* BMC Grid */
+        .header .badge {
+            background: #f4a261d0;
+            backdrop-filter: blur(4px);
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2d3e2b;
+            margin-top: 0.8rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .sub {
+            color: #3a5e3f;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* grid BMC 3x3 */
         .bmc-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.2rem;
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
-        /* Card styling */
+        /* card style */
         .card {
-            background: #ffffff;
-            border-radius: 1.25rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
-            overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            padding: 1.3rem 1.2rem;
+            transition: all 0.25s ease-in-out;
+            box-shadow: 0 12px 25px -12px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.7);
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 30px -12px rgba(46, 125, 50, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 24px 35px -16px rgba(50, 80, 30, 0.3);
+            background: rgba(255, 255, 255, 0.98);
+            border-color: #f4c542;
         }
 
-        .card-header {
-            background: #2e7d32;
-            color: white;
-            padding: 0.9rem 1rem;
+        .card-title {
+            font-size: 1.5rem;
             font-weight: 700;
-            font-size: 1.2rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 10px;
-            border-bottom: 3px solid #ffb74d;
+            border-left: 5px solid #f4a261;
+            padding-left: 12px;
         }
 
-        .card-header i {
-            font-size: 1.3rem;
-            width: 28px;
-            text-align: center;
+        .card-title span {
+            font-size: 1.7rem;
         }
 
-        .card-body {
-            padding: 1.2rem 1rem 1.4rem;
-            flex: 1;
-            background: #fefef7;
+        .card-content {
+            font-size: 0.92rem;
+            line-height: 1.45;
+            color: #2c3e2f;
         }
 
-        .card-body p {
-            font-size: 0.9rem;
-            color: #2c3e2c;
+        .card-content p {
             margin-bottom: 0.6rem;
+        }
+
+        .card-content ul {
+            padding-left: 1.2rem;
+            list-style-type: none;
+        }
+
+        .card-content li {
+            margin-bottom: 0.45rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .card-content li::before {
+            content: "🍍";
+            position: absolute;
+            left: -0.2rem;
+            top: 0;
+            font-size: 0.8rem;
+        }
+
+        /* beberapa custom */
+        .highlight {
+            font-weight: 600;
+            color: #c46b2b;
+        }
+
+        /* footer */
+        .footer-note {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px dashed #9bc48b;
+            font-size: 0.85rem;
+            color: #2b5935;
             display: flex;
-            align-items: baseline;
-            gap: 8px;
+            justify-content: center;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
-        .card-body strong {
-            color: #1b5e1f;
-            font-weight: 600;
-            min-width: 100px;
-        }
-
-        .list-bmc {
-            list-style: none;
-            margin-top: 8px;
-        }
-
-        .list-bmc li {
-            margin-bottom: 10px;
-            font-size: 0.88rem;
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-        }
-
-        .list-bmc li i {
-            color: #2e7d32;
-            font-size: 0.8rem;
-            margin-top: 4px;
-            min-width: 18px;
-        }
-
-        .badge-item {
-            background: #e9f5e9;
-            padding: 4px 10px;
+        .footer-note span {
+            background: #e9f5e3;
+            padding: 0.2rem 1rem;
             border-radius: 30px;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin: 3px 4px 3px 0;
+            font-weight: 500;
         }
 
-        hr {
-            margin: 12px 0;
-            border: 0;
-            height: 1px;
-            background: #d4e2d4;
-        }
-
-        /* footer note */
-        .footer {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1.2rem;
-            border-top: 1px solid #cde2cd;
-            font-size: 0.85rem;
-            color: #3d6b3d;
-        }
-
-        .github-badge {
-            background: #1f2a1f;
-            color: white;
-            padding: 6px 14px;
-            border-radius: 40px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.8rem;
-            text-decoration: none;
-            margin-top: 12px;
-            transition: 0.2s;
-        }
-
-        .github-badge:hover {
-            background: #2e7d32;
-        }
-
-        /* Responsive */
+        /* responsive : tablet & mobile */
         @media (max-width: 900px) {
+            body {
+                padding: 1.2rem;
+            }
             .bmc-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
             }
-            body {
+            .header h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media (max-width: 580px) {
+            .bmc-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .card-title {
+                font-size: 1.3rem;
+            }
+            .bmc-container {
                 padding: 1.2rem;
             }
         }
 
-        @media (max-width: 550px) {
-            .bmc-grid {
-                grid-template-columns: 1fr;
-            }
-            .card-header {
-                font-size: 1rem;
-            }
-            .header h1 {
-                font-size: 1.6rem;
-            }
+        /* efek dekorasi buah apung */
+        .bg-fruit {
+            position: fixed;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.2;
+            font-size: 5rem;
+            transform: rotate(-5deg);
         }
     </style>
 </head>
 <body>
-<div class="container">
+<div class="bmc-container">
     <div class="header">
-        <h1>
-            <i class="fas fa-seedling"></i> 
-            Business Model Canvas 
-            <i class="fas fa-apple-alt"></i>
-        </h1>
-        <div class="subhead">
-            🥗 Salad Buah Segar "FruityFresh" 🍍
-        </div>
-        <p style="margin-top: 12px; max-width: 650px; margin-left: auto; margin-right: auto; color: #3c5e3c;">
-            Model bisnis untuk usaha salad buah kekinian, sehat, dan praktis — target anak muda & pekerja urban.
-        </p>
+        <h1>🥗 BUSINESS MODEL CANVAS</h1>
+        <div class="badge">🍓 SALAD BUAH SEGAR | FRUIT BOWL HAPPINESS 🍊</div>
+        <div class="sub">"Sehat, Praktis, dan Penuh Rasa — Salad Buah Premium untuk Semua"</div>
     </div>
 
-    <!-- BMC Grid 9 blok -->
+    <!-- grid 9 blok BMC -->
     <div class="bmc-grid">
-        <!-- 1. Customer Segments -->
+        <!-- 1. Key Partners -->
         <div class="card">
-            <div class="card-header">
-                <i class="fas fa-users"></i> Customer Segments
+            <div class="card-title">
+                <span>🤝</span> Key Partners
             </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fas fa-user-graduate"></i> Mahasiswa & remaja (kantin kampus)</li>
-                    <li><i class="fas fa-briefcase"></i> Karyawan kantoran (lunch sehat)</li>
-                    <li><i class="fas fa-heartbeat"></i> Ibu rumah tangga & pecinta gaya hidup sehat</li>
-                    <li><i class="fas fa-dumbbell"></i> Gym goers & pelaku diet</li>
-                    <li><i class="fas fa-calendar-alt"></i> Pelanggan event (catering sehat)</li>
+            <div class="card-content">
+                <p><span class="highlight">• Pemasok Buah Lokal</span> (petani & distributor organik)</p>
+                <p><span class="highlight">• Platform Online</span> (GoFood, GrabFood, ShopeeFood)</p>
+                <p><span class="highlight">• Logistik & Kurir</span> (JNE, instant courier)</p>
+                <p><span class="highlight">• Supplier Kemasan Ramah Lingkungan</span></p>
+                <p><span class="highlight">• Gym & Katering Sehat</span> (kerjasama bundling)</p>
+            </div>
+        </div>
+
+        <!-- 2. Key Activities -->
+        <div class="card">
+            <div class="card-title">
+                <span>⚙️</span> Key Activities
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Pencucian & pemotongan buah higienis</li>
+                    <li>Peracikan topping (yogurt, granola, madu)</li>
+                    <li>Pengemasan menarik & tahan bocor</li>
+                    <li>Promosi digital (Instagram, TikTok)</li>
+                    <li>Delivery management & quality control</li>
+                    <li>Inovasi menu seasonal (durian, mangga, berry)</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 2. Value Propositions -->
+        <!-- 3. Value Propositions -->
         <div class="card">
-            <div class="card-header">
-                <i class="fas fa-gem"></i> Value Propositions
+            <div class="card-title">
+                <span>💎</span> Value Propositions
             </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fas fa-check-circle"></i> Salad buah 100% segar, tanpa pengawet</li>
-                    <li><i class="fas fa-hand-sparkles"></i> Customizable topping (yogurt, granola, keju)</li>
-                    <li><i class="fas fa-box"></i> Kemasan praktis & estetik (ramah lingkungan)</li>
-                    <li><i class="fas fa-stopwatch"></i> Siap antar < 30 menit (area terdekat)</li>
-                    <li><i class="fas fa-tags"></i> Harga bersahabat + promo bundling</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 3. Channels -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-chalkboard-user"></i> Channels
-            </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fab fa-whatsapp"></i> WhatsApp Order (fast response)</li>
-                    <li><i class="fab fa-instagram"></i> Instagram (story, iklan, DM)</li>
-                    <li><i class="fas fa-motorcycle"></i> GoFood / GrabFood / ShopeeFood</li>
-                    <li><i class="fas fa-store"></i> Pop-up booth di kantin kampus & co-working space</li>
-                    <li><i class="fas fa-envelope"></i> Email & form google untuk catering event</li>
-                </ul>
+            <div class="card-content">
+                <p>✨ <span class="highlight">Buah 100% segar</span> tanpa pengawet</p>
+                <p>✨ <span class="highlight">Custom bowl</span> : pilih 5+ jenis buah & saus favorit</p>
+                <p>✨ <span class="highlight">Praktis & instan</span> (siap santap, cocok untuk diet & busy people)</p>
+                <p>✨ <span class="highlight">Kemasan eco-friendly</span> + sendok bambu</p>
+                <p>✨ Program <span class="highlight">langganan mingguan</span> diskon 15%</p>
+                <p>✨ Topping premium : granola protein, biji chia, almond slice</p>
             </div>
         </div>
 
         <!-- 4. Customer Relationships -->
         <div class="card">
-            <div class="card-header">
-                <i class="fas fa-handshake"></i> Customer Relationships
+            <div class="card-title">
+                <span>❤️</span> Customer Relationships
             </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fas fa-stamp"></i> Program loyalitas (stamp digital: beli 5 gratis 1)</li>
-                    <li><i class="fas fa-comment-dots"></i> Respon cepat via chat + follow up kepuasan</li>
-                    <li><i class="fas fa-grin-hearts"></i> Personalisasi pesanan (tingkat kemanisan, topping)</li>
-                    <li><i class="fas fa-trophy"></i> Giveaway & challenge #SaladSehat setiap bulan</li>
-                    <li><i class="fas fa-users-between"></i> Komunitas sehat (tips nutrisi di grup WA)</li>
-                </ul>
+            <div class="card-content">
+                <p>🍉 <span class="highlight">Komunitas WA & Telegram</span> (promo eksklusif)</p>
+                <p>🍉 <span class="highlight">Loyalty reward</span> : setiap 5x beli gratis 1x</p>
+                <p>🍉 <span class="highlight">Polling rasa baru</span> via story Instagram</p>
+                <p>🍉 <span class="highlight">Fast response CS</span> + komplain mudah via WhatsApp</p>
+                <p>🍉 <span class="highlight">Birthday special</span> : extra topping gratis</p>
             </div>
         </div>
 
-        <!-- 5. Revenue Streams -->
+        <!-- 5. Channels -->
         <div class="card">
-            <div class="card-header">
-                <i class="fas fa-coins"></i> Revenue Streams
+            <div class="card-title">
+                <span>📱</span> Channels
             </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fas fa-cart-shopping"></i> Penjualan per porsi salad (reguler & jumbo)</li>
-                    <li><i class="fas fa-calendar-week"></i> Paket langganan mingguan (3x atau 5x kirim)</li>
-                    <li><i class="fas fa-champagne-glasses"></i> Catering sehat untuk rapat, ulang tahun, workshop</li>
-                    <li><i class="fas fa-layer-group"></i> Bundling + minuman infused water / jus</li>
-                    <li><i class="fas fa-ad"></i> Kerjasama endorse & affiliate dengan health influencer</li>
-                </ul>
+            <div class="card-content">
+                <p>📲 <span class="highlight">Online:</span> Website order (custom salad), GoFood, GrabFood</p>
+                <p>🏪 <span class="highlight">Offline:</span> Booth di food hall, kafe rekanan, dan pop-up market</p>
+                <p>📢 <span class="highlight">Sosial media:</span> IG, TikTok (review & demo potong buah)</p>
+                <p>🚚 <span class="highlight">Delivery sendiri</span> (radius 3 km) & kerjasama kurir on-demand</p>
             </div>
         </div>
 
-        <!-- 6. Key Resources -->
+        <!-- 6. Customer Segments -->
         <div class="card">
-            <div class="card-header">
-                <i class="fas fa-cubes"></i> Key Resources
+            <div class="card-title">
+                <span>👥</span> Customer Segments
             </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fas fa-apple-whole"></i> Buah segar (supplier harian: stroberi, mangga, apel, kiwi, dll)</li>
-                    <li><i class="fas fa-box-open"></i> Kemasan premium (ecofriendly + sendok garpu bambu)</li>
-                    <li><i class="fas fa-blender"></i> Peralatan dapur (steril, pisau profesional)</li>
-                    <li><i class="fas fa-mobile-alt"></i> Manajemen order via sistem sederhana (Google Spreadsheet + WA API)</li>
-                    <li><i class="fas fa-truck"></i> Motor delivery (in-house + mitra kurir)</li>
-                </ul>
+            <div class="card-content">
+                <p>🧘 <span class="highlight">Generasi Milenial & Gen Z</span> (kesehatan & gaya hidup)</p>
+                <p>💼 <span class="highlight">Pekerja kantoran</span> (makan siang praktis & sehat)</p>
+                <p>🏋️ <span class="highlight">Fitness enthusiast & pelaku diet</span> (rendah kalori)</p>
+                <p>👨‍👩‍👧 <span class="highlight">Ibu rumah tangga & keluarga</span> (camilan sehat anak)</p>
+                <p>🍑 <span class="highlight">Pelanggan premium</span> yang menginginkan custom bowl berkualitas</p>
             </div>
         </div>
 
-        <!-- 7. Key Activities -->
+        <!-- 7. Key Resources -->
         <div class="card">
-            <div class="card-header">
-                <i class="fas fa-clipboard-list"></i> Key Activities
+            <div class="card-title">
+                <span>📦</span> Key Resources
             </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fas fa-utensils"></i> Pencucian, pemotongan, & mixing buah higienis</li>
-                    <li><i class="fas fa-camera-retro"></i> Konten marketing (foto/video menarik) setiap hari</li>
-                    <li><i class="fas fa-tasks"></i> Pengemasan & quality control</li>
-                    <li><i class="fas fa-chart-line"></i> Riset tren rasa & topping baru</li>
-                    <li><i class="fas fa-headset"></i> Layanan pelanggan & pengelolaan order online</li>
-                </ul>
+            <div class="card-content">
+                <p>🍌 <span class="highlight">Buah segar premium</span> (mangga, kiwi, apel, naga, berry, melon)</p>
+                <p>❄️ <span class="highlight">Cold storage & chiller display</span></p>
+                <p>🧑‍🍳 <span class="highlight">Tim produksi terlatih</span> (higienis + estetik)</p>
+                <p>📱 <span class="highlight">Sistem manajemen pesanan (website & kasir digital)</span></p>
+                <p>🚴 <span class="highlight">Armada delivery (sepeda motor + box pendingin)</span></p>
             </div>
         </div>
 
-        <!-- 8. Key Partnerships -->
+        <!-- 8. Cost Structure -->
         <div class="card">
-            <div class="card-header">
-                <i class="fas fa-handshake"></i> Key Partnerships
+            <div class="card-title">
+                <span>💰</span> Cost Structure
             </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fas fa-tractor"></i> Petani/pemasok buah lokal (harga kompetitif)</li>
-                    <li><i class="fas fa-motorcycle"></i> Gojek/Grab untuk pengiriman instant</li>
-                    <li><i class="fas fa-store"></i> Kantin kampus & gym sebagai lokasi titip jual</li>
-                    <li><i class="fas fa-laptop-code"></i> Platform digital (ShopeeFood, Instagram collab)</li>
-                    <li><i class="fas fa-recycle"></i> Supplier kemasan ramah lingkungan (branding bersama)</li>
-                </ul>
+            <div class="card-content">
+                <p>▪️ Pembelian bahan baku (buah segar) → 35%</p>
+                <p>▪️ Kemasan premium eco + cutlery → 12%</p>
+                <p>▪️ Biaya operasional (sewa tempat, listrik, air) → 15%</p>
+                <p>▪️ Gaji karyawan & mitra kurir → 20%</p>
+                <p>▪️ Marketing & ads (IG, TikTok, endorse) → 10%</p>
+                <p>▪️ Platform fee (GoFood, Grab) → 8%</p>
             </div>
         </div>
 
-        <!-- 9. Cost Structure -->
+        <!-- 9. Revenue Streams -->
         <div class="card">
-            <div class="card-header">
-                <i class="fas fa-chart-simple"></i> Cost Structure
+            <div class="card-title">
+                <span>💵</span> Revenue Streams
             </div>
-            <div class="card-body">
-                <ul class="list-bmc">
-                    <li><i class="fas fa-apple-alt"></i> Bahan baku (buah segar) ~ 40%</li>
-                    <li><i class="fas fa-box"></i> Kemasan & alat makan ~ 12%</li>
-                    <li><i class="fas fa-truck-fast"></i> Biaya pengiriman & operasional kurir ~ 15%</li>
-                    <li><i class="fas fa-chart-line"></i> Pemasaran (iklan IG, promo) ~ 8%</li>
-                    <li><i class="fas fa-store"></i> Sewa tempat / biaya dapur bersama ~ 10%</li>
-                    <li><i class="fas fa-user"></i> Tenaga kerja (paruh waktu) & lain-lain ~ 15%</li>
-                </ul>
-                <hr>
-                <p><strong>💡 Estimasi margin:</strong> 20-25% dengan skala 100 porsi/hari</p>
+            <div class="card-content">
+                <p>🍍 <span class="highlight">Penjualan single bowl</span> (mulai Rp 25.000 - Rp 45.000)</p>
+                <p>🍓 <span class="highlight">Paket bundling</span> (2 bowl + minum detoks) diskon hemat</p>
+                <p>🥝 <span class="highlight">Langganan salad mingguan</span> (4-7 porsi/minggu)</p>
+                <p>🍊 <span class="highlight">Catering sehat untuk event & workshop</span></p>
+                <p>🛒 <span class="highlight">Add-on topping / extra protein</span> (+5k per item)</p>
+                <p>🎁 <span class="highlight">Gift card & corporate wellness package</span></p>
             </div>
         </div>
     </div>
 
-    <div class="footer">
-        <p><i class="fas fa-leaf"></i> Business Model Canvas - Salad Buah "FruityFresh" | Disusun untuk tugas BMC</p>
-        <p style="margin-top: 8px;">📌 Kode ini siap diunggah ke GitHub → aktifkan GitHub Pages untuk tampilan web.</p>
-        <a href="#" class="github-badge" onclick="alert('Upload file ini ke repository GitHub Anda. Gunakan Settings > Pages > Branch main.')">
-            <i class="fab fa-github"></i> Cara pakai GitHub Pages
-        </a>
+    <div class="footer-note">
+        <span>🍇 “Bite the fresh, live the healthy” 🍎</span>
+        <span>📊 BMC Salad Buah Segar | Edisi Inovasi 2025</span>
+        <span>📞 +62 812 3456 7890 (Order & Partner)</span>
     </div>
 </div>
 
-<!-- instruksi sederhana via console -->
-<script>
-    console.log("✅ BMC Salad Buah - siap di-deploy ke GitHub Pages. Simpan sebagai index.html");
-</script>
+<!-- efek visual buah kecil apung tidak mengganggu -->
+<div class="bg-fruit">
+    🍉 🍊 🥝 🍓 🍌 🍎
+</div>
 </body>
 </html>
